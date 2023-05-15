@@ -8,7 +8,7 @@ import java.util.Scanner;
 
 public class job2 {
     public static void main(String[] args) {
-        long startTime = System.currentTimeMillis(); // Temps de départ de l'exécution du programme
+        long startTime = System.currentTimeMillis();
 
         File f = new File("/home/ken/IdeaProjects/runtra/src/jour4/text.txt");
 
@@ -33,7 +33,7 @@ public class job2 {
             str += a;
             System.out.print(a);
             try {
-                FileWriter writer = new FileWriter(f, true); // Utilisation du FileWriter en mode append (ajout à la fin du fichier)
+                FileWriter writer = new FileWriter(f, true);
                 writer.write(a);
                 writer.close();
             } catch (IOException e) {
@@ -41,8 +41,8 @@ public class job2 {
             }
         }
 
-        long endTime = System.currentTimeMillis(); // Temps d'arrêt de l'exécution du programme
-        long executionTime = endTime - startTime; // Calcul du temps d'exécution en millisecondes
+        long endTime = System.currentTimeMillis();
+        long executionTime = endTime - startTime;
         System.out.println("    Temps d'exécution total du programme : " + executionTime + " millisecondes");
     }
 }
